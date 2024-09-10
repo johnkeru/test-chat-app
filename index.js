@@ -7,6 +7,7 @@ const socket = require('./socket')
 require('./config/dbConnect')()
 const userRouter = require('./routers/userRouter')
 const chatRouter = require('./routers/chatRouter')
+const User = require('./models/User')
 
 const app = express()
 const server = app.listen(5000, () => console.log("Server is listening on: http://localhost:5000"))
@@ -29,7 +30,10 @@ app.use(session({
     }
 }))
 
-app.get('/', (req, res) => res.send('hehe'))
+app.get('/', async (req, res) => {
+    const users = await User.find({})
+    res.json({ users })
+})
 
 
 app.use(userRouter)
