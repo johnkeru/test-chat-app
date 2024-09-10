@@ -12,7 +12,7 @@ const app = express()
 const server = app.listen(5000, () => console.log("Server is listening on: http://localhost:5000"))
 socket(server)
 
-app.use(express.static('public'))
+app.use(express.static(__dirname + '/public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname + "/views"));
