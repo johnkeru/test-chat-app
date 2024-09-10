@@ -15,7 +15,7 @@ socket(server)
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.set('view engine', 'ejs')
-app.use(Express.static(__dirname + "/views"));
+app.use(express.static(__dirname + "/views"));
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
