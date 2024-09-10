@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form style="display: grid; width: 500px; margin: 30vh auto;" action="/register" method="post">
+        <h2>Sign Up</h2>
+        <input type="text" name="username" placeholder="username">
+        <% if (field==='username' ) { %>
+            <p style="color: red">
+                <%= value %>
+            </p>
+            <% } %>
+                <input type="text" name="password" placeholder="password">
+                <% if (field==='password' ) { %>
+                    <p style="color: red">
+                        <%= value %>
+                    </p>
+                    <% } %>
+                        <button type="submit">submit</button>
+                        <a href="./login">Already have an account?</a>
+    </form>
+</body>
+
+</html>
