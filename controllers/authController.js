@@ -28,8 +28,7 @@ exports.login = async (req, res) => {
  *   @param {import('express').Response} res - The response object
 */
 exports.showLogin = (_, res) => {
-    // res.render('login', { field: '', value: '' })
-    res.json({ fuck: 'hehe' })
+    res.render('login', { field: '', value: '' })
 }
 
 /**
