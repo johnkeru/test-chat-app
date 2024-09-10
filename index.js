@@ -29,6 +29,8 @@ app.use(session({
     }
 }))
 
+app.get('/', (req, res) => res.send('hehe'))
+
 
 app.use(userRouter)
 app.use(chatRouter)
