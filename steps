@@ -1,0 +1,9 @@
+1. install express, mongoose, ejs
+2. create user schema, login & sign up using ejs
+3. create router, middleware
+4. create a session store (install express-session, connect-mongo)
+5. create message schema
+6. create router apply middleware
+7. create chat area in ejs
+8. implement the interaction
+9. make the chat smooth
